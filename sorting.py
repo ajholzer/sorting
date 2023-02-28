@@ -201,13 +201,13 @@ def quick_sort(xs, cmp=cmp_standard):
                 xs[i], xs[j] = xs[j], xs[i]
         xs[i + 1], xs[right] = xs[right], xs[i + 1]
         return i + 1
-    
+
     def sort(left, right):
         if left < right:
             p = partition(left, right)
             sort(left, p - 1)
             sort(p + 1, right)
-    
+
     if len(xs) <= 1:
         return xs
     sort(0, len(xs) - 1)
